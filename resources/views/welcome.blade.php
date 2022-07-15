@@ -23,13 +23,13 @@
             @csrf
             <input type="email" name="email" placeholder="E-mail">
             @error('email')
-                <span class="invalid-feedback" role="alert" style="color:red;">
+                <span class="invalid-feedback" role="alert" style="color:red;padding:10px;">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
             <input type="password" name="password" placeholder="Password">
             @error('password')
-                <span class="invalid-feedback" role="alert" style="color:red;">
+                <span class="invalid-feedback" role="alert" style="color:red;padding:10px;">
                     <strong>{{ $message }}</strong>
                 </span>
             @enderror
@@ -43,7 +43,7 @@
     </div>
 
     <!-- Forgotten Password Container -->
-    <div id="forgotten-container">
+    {{-- <div id="forgotten-container">
         <h1>Forgotten</h1>
         <span class="close-btn">
             <img src="https://cdn4.iconfinder.com/data/icons/miu/22/circle_close_delete_-128.png">
@@ -53,7 +53,7 @@
             <input type="email" name="email" placeholder="E-mail">
             <a href="#" class="orange-btn">Get new password</a>
         </form>
-    </div>
+    </div> --}}
     <style>
         html {
             background: url(https://i.pinimg.com/736x/b5/b2/a5/b5b2a55faa9c9d3a068146797284c5bc--backgrounds-free-wooden-boards.jpg) no-repeat center center fixed;
@@ -116,7 +116,7 @@
             height: 20px;
             text-align: center;
             border-radius: 10px;
-            opacity: .9;
+            opacity: .5;
             -webkit-transition: all 2s ease-in-out;
             -moz-transition: all 2s ease-in-out;
             -o-transition: all 2s ease-in-out;
