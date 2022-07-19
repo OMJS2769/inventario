@@ -11,3 +11,4 @@ Route::get('/', function () {
 Auth::routes();
 #Products
 Route::get('products',[\App\Http\Controllers\ProductController::class,'index'])->name('products')->middleware('auth');
+Route::post('products_store',[\App\Http\Controllers\ProductController::class,'store'])->name('products_store')->middleware('auth');

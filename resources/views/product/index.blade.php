@@ -28,7 +28,11 @@
                             @foreach ($products as $product)
                                 <tr>
                                     <td>
+                                        @if(is_null($product->image))
                                         <img src="https://laravel-livewire.com/img/twitter.png" width="120" height="120">
+                                        @else
+                                        <img src="{{ asset('storage/products/'.$product->image) }}" width="120" height="120">
+                                        @endif
                                     </td>
                                     <td>{{ $product->name }}</td>
                                     <td>{{ $product->description }}</td>
@@ -41,7 +45,7 @@
                                             Crear venta
                                         </button>
                                         <br/> --}}
-                                        <button class="btn btn-warning btn-block" style="color:white;">
+                                        <button onclick="editProduct({{ $product->id }});" class="btn btn-warning btn-block" style="color:white;">
                                             <span class="icon-pencil"></span>
                                             Editar
                                         </button>
@@ -61,7 +65,12 @@
     </div>
 </div>
 @include('product.create')
+@include('product.edit')
 <script>
     const createProduct = () => $("#modal_create_product").modal('show');
+    const editProduct = id => {
+        //data
+        $("#modal_create_product").modal('show')
+    };
 </script>
 @endsection

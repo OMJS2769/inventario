@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->integer('stock');
             $table->double('purchase_price', 8, 2);
             $table->double('sale_price', 8, 2);
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
