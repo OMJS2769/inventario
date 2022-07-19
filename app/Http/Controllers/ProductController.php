@@ -25,7 +25,7 @@ class ProductController extends Controller
             $image      = $request->file('image');
             $fileName   = time() . '.' . $image->getClientOriginalExtension();
 
-            $img = \Image::make($image->getRealPath());
+            $img = Image::make($image->getRealPath());
             $img->resize(120, 120, function ($constraint) {
                 $constraint->aspectRatio();
             });
