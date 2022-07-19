@@ -25,7 +25,7 @@
     <link href="{{ asset('css/semantic.css') }}" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
-    @livewireStyles
+    {{-- @livewireStyles --}}
 </head>
 
 <body class="hold-transition sidebar-mini layout-navbar-fixed layout-fixed layout-fixed sidebar-collapse ">
@@ -152,7 +152,7 @@
     </div>
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
-    @livewireScripts
+    {{-- @livewireScripts --}}
     {{-- <!-- Google maps -->
     <script src="https://maps.google.com/maps?file=api&amp;v=2&amp;sensor=false" type="text/javascript"></script> --}}
     <!-- jQuery -->

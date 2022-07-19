@@ -7,5 +7,7 @@ Route::get('/', function () {
         return redirect(route('products'));
     return view('welcome');
 })->name('/');
+
 Auth::routes();
-Route::view('products','product.index')->name('products')->middleware('auth');
+#Products
+Route::get('products',[\App\Http\Controllers\ProductController::class,'index'])->name('products')->middleware('auth');
